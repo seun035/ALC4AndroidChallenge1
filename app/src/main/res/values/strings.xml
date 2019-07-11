@@ -3,4 +3,7 @@
     <string name="about_alc">about alc</string>
     <string name="profile">my profile</string>
     <string name="welcome_message">Welcome to ALC 4.0</string>
+    <string name="welcome_toolbar_text">ALC 4 Phase 1</string>
+    <string name="profile_toolbar_text">My Profile</string>
+    <string name="about_alc_toolbar_text">About ALC</string>
 </resources>
