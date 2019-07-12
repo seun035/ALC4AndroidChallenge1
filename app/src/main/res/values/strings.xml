@@ -6,4 +6,16 @@
     <string name="welcome_toolbar_text">ALC 4 Phase 1</string>
     <string name="profile_toolbar_text">My Profile</string>
     <string name="about_alc_toolbar_text">About ALC</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="profile_name">Liadi Oluwaseun</string>
+    <string name="track">Track:</string>
+    <string name="my_track">Android</string>
+    <string name="country">Country:</string>
+    <string name="my_country">Nigeria</string>
+    <string name="email">Email:</string>
+    <string name="my_email">liadioluwaseun@gmail.com</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="my_phone_number">07036057617</string>
+    <string name="slack_username">Slack Username:</string>
+    <string name="my_slack_username">\@Oluwaseun</string>
 </resources>
