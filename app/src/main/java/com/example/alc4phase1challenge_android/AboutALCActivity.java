@@ -6,15 +6,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
 public class AboutALCActivity extends AppCompatActivity {
 
     private WebView mWebView;
+
+    private ProgressBar mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +27,19 @@ public class AboutALCActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.about_alc_toolbar_text);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mWebView = findViewById(R.id.about_alc_webview);
+        mProgressBar = findViewById(R.id.about_alc_progressBar);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
                 super.onProgressChanged(view, newProgress);
+                if (newProgress == 100){
+                    mProgressBar.setVisibility(View.GONE);
+                }
+                else {
+                    mProgressBar.setVisibility(View.VISIBLE);
+                    mProgressBar.setProgress(newProgress);
+                }
             }
 
             @Override
